@@ -9,25 +9,25 @@ Given three input images:
 
 This program blends the source region into the destination image seamlessly, preserving gradient information from the source image (or both, using mixed gradients). This results in a more natural-looking composite and source image boundary, as shown in the original paper.
 
-Example results and input images are located in the `data/` folder. 
+Example results and input images are located in the `data/` folder and its subfolders. 
 
 ### Alpha Images
 Source images with a wide range of alpha (transparency) values can produce confusing or poorly blend results. This happens because the alpha channel gradients are weaker or more subtle compared to color channels, causing the solver to converge faster which sometimes results in less accurate or visually smooth transitions. As a result, artifacts or jagged edges may appear in areas with complex alpha variation, and we can even get results that appear to be direct pasting when our source image's alpha channel is constant and transparent.
 
 ## Program Origin
 
-This project was created as a bonus assignment for a graduate-level computer graphics course. Since not everyone in the course had a strong background in math or computer science, I:
+This project was created as a bonus assignment for a graduate computer graphics course. Since not everyone in the course had a strong background in math or computer science, I decided to:
 
-* Wrote my own linear solver from scratch,
-* Avoided using off-the-shelf libraries,
+* Write my own linear solver from scratch based on existing mathematical methods,
+* Avoided using off-the-shelf libraries to force myself to create my own solver,
 * Heavily commented the code for clarity and learning purposes.
 
-My goal was to understand the inner workings of Poisson Image Editing, Seamless Image Cloning, and to be able to teach others it by looking just at my codebase and report, especially the construction and solution of the underlying sparse linear system.
+My goal was to understand the inner workings of Poisson Image Editing's Seamless Image Cloning, and to be able to teach others it by looking just at my codebase and report, especially the construction and solution of the underlying sparse linear system.
 
 ## Performance Notes
 
 * The solver uses a basic and understandable Gauss-Seidel iterative method, written from scratch for educational purposes.
-* Many simple optimizations (e.g., region-only iteration, pixel cache reuse, multigrid, etc.) are not yet implemented, feel free to explore and improve performance.
+* Many simple optimizations (e.g. region-only iteration, pixel cache reuse, multigrid, etc.) are not yet implemented, feel free to explore and improve performance.
 * You are welcome to replace the solver with a faster or more advanced one if desired, either your own or an off-the-shelf library.
 
 ## Reference Paper 
