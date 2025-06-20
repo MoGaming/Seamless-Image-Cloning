@@ -3,21 +3,24 @@ This project implements Seamless Cloning in C++ using OpenFrameworks, based on t
 
 ## Program Use
 Given three input images:
-* **Source image** – the image to copy from
-* **Mask image** – a grayscale image defining the region to clone
-* **Destination image** – the target image to paste into
+* **Source image** – the image to copy from,
+* **Mask image** – a binary image defining the region to clone from the source image,
+* **Destination image** – the target image to paste the source image into.
 
 This program blends the source region into the destination image seamlessly, preserving gradient information from the source image (or both, using mixed gradients). This results in a more natural-looking composite and source image boundary, as shown in the original paper.
 
-Example results and input images are located in the `data/` folder.
+Example results and input images are located in the `data/` folder. 
+
+### Alpha Images
+Source images with a wide range of alpha (transparency) values can produce confusing or poorly blend results. This happens because the alpha channel gradients are weaker or more subtle compared to color channels, causing the solver to converge faster which sometimes results in less accurate or visually smooth transitions. As a result, artifacts or jagged edges may appear in areas with complex alpha variation, and we can even get results that appear to be direct pasting when our source image's alpha channel is constant and transparent.
 
 ## Program Origin
 
 This project was created as a bonus assignment for a graduate-level computer graphics course. Since not everyone in the course had a strong background in math or computer science, I:
 
-* Wrote my own linear solver from scratch
-* Avoided using off-the-shelf libraries
-* Heavily commented the code for clarity and learning purposes
+* Wrote my own linear solver from scratch,
+* Avoided using off-the-shelf libraries,
+* Heavily commented the code for clarity and learning purposes.
 
 My goal was to understand the inner workings of Poisson Image Editing, Seamless Image Cloning, and to be able to teach others it by looking just at my codebase and report, especially the construction and solution of the underlying sparse linear system.
 
