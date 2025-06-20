@@ -30,3 +30,5 @@ My goal was to understand the inner workings of Poisson Image Editing, Seamless 
 ## Reference Paper 
 
 Paper: Patrick Pérez, Michel Gangnet, and Andrew Blake. 2023. Poisson Image Editing. Seminal Graphics Papers: Pushing the Boundaries, Volume 2 (1st ed.). Association for Computing Machinery, New York, NY, USA, Article 60, 577–582. https://doi.org/10.1145/3596711.3596772 
+
+Additionally, contact me for the written report as it details all the inner workings, failure cases, and success cases. I have decided to not include it in this public repo encase the professor of the course decides to reuse this paper in future assignments.
