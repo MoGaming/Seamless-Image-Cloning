@@ -16,7 +16,7 @@ Source images with a wide range of alpha (transparency) values can produce confu
 
 ## Program Origin
 
-This project was created as a bonus assignment for a graduate computer graphics course. Since not everyone in the course had a strong background in math or computer science, I decided to:
+This project was created as a bonus assignment for a graduate computer graphics course I took. Since not everyone in the course had a strong background in math or computer science, I decided to:
 
 * Write my own linear solver from scratch based on existing mathematical methods,
 * Avoided using off-the-shelf libraries to force myself to create my own solver,
