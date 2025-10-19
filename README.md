@@ -1,5 +1,5 @@
 # Seamless-Image-Cloning
-This project implements Seamless Cloning in C++ using OpenFrameworks, based on the seminal paper "Poisson Image Editing" by Patrick Pérez, Michel Gangnet, and Andrew Blake (2023).
+This project implements Seamless Cloning in C++ using OpenFrameworks, based on the seminal paper "Poisson Image Editing" by Patrick Pérez, Michel Gangnet, and Andrew Blake (2003).
 
 ## Program Use
 Given three input images:
